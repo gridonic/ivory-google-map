@@ -52,6 +52,9 @@ class DistanceMatrixRequest
     /** @var boolean */
     protected $sensor;
 
+    /** @var string */
+    protected $key;
+
     /**
      * Creates a distance matrix request.
      */
@@ -438,6 +441,26 @@ class DistanceMatrixRequest
         }
 
         $this->sensor = $sensor;
+    }
+
+    /**
+     * Checks if the distance matrix request has an api key.
+     *
+     * @return string $key Api key
+     */
+    public function hasKey()
+    {
+        return $this->key;
+    }
+
+    /**
+     * Sets the distance matrix request api key.
+     *
+     * @param boolean $sensor TRUE if the distance matrix request has a sensor else FALSE.
+     */
+    public function setKey($key)
+    {
+        $this->key = $key;
     }
 
     /**
